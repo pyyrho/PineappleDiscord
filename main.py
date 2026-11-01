@@ -305,7 +305,7 @@ async def pineapple(ctx):
 
     await bot.say(embed=embed)
 
-#-----------------------------------------------------------------PING-------------------------------------------------------------------------------
+# PING
 @bot.command(pass_context=True)
 @commands.cooldown(1, 7, commands.BucketType.user)
 async def ping(ctx):
@@ -356,12 +356,12 @@ async def add(*left : int, right : int):
     # Simple command to add numbers
     await bot.say(left + right)
 
-# ---------------------------------------------------------------CHANNEL ID----------------------------------------------------------------------
+# CHANNEL ID
 @bot.command(pass_context=True)
 async def channelid(ctx):
     await bot.say('the channel id is: {}'.format(ctx.message.channel.id))
 
-# ---------------------------------------------------------------CLEAR COMMAND----------------------------------------------------------------------
+# CLEAR COMMAND
 @bot.command(pass_context = True)
 @commands.has_permissions(ban_members=True)
 async def clear(ctx, number):
@@ -389,7 +389,7 @@ async def clear_error(error, ctx):
         await bot.delete_message(ctx.message)
 
 
-# ---------------------------------------------------------------ON_MESSAGE EVENT----------------------------------------------------------------------
+# ON_MESSAGE EVENT
 chat_filter = [] #put words here in CAPS or it wont work. Strings seperated by commas.
 
 @bot.event
